@@ -49,10 +49,10 @@ const Cursos = () => {
     <section id="cursos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Introduction */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16 items-center fade-in">
-          <div>
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 mb-12 md:mb-16 items-center fade-in">
+          <div className="hidden md:block">
             <img
-              src="images/foto3.jpg"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto2.jpg"
               alt="Curso Manic 0.0"
               className="w-full h-auto rounded-lg shadow-md"
             />
@@ -150,26 +150,26 @@ const Cursos = () => {
 
         {/* Photo Gallery */}
         <div className="mb-8 fade-in">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
             <img
-              src="images/foto2.jpg"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto3.jpg"
               alt="Curso foto 1"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img
-              src="images/foto3.jpg"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto4.jpg"
               alt="Curso foto 2"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img
-              src="images/foto4.jpg"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto5.jpg"
               alt="Curso foto 3"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
             />
             <img
-              src="images/foto5.jpg"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto6.jpg"
               alt="Curso foto 4"
-              className="w-full h-64 object-cover rounded-lg shadow-md"
+              className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
             />
           </div>
         </div>

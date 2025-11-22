@@ -5,12 +5,12 @@ const QuienSoy = () => {
   return (
     <section id="quien-soy" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Image Column */}
           <div className="fade-in">
             <img
-              src="images/foto6.jpg"
-              alt="Lili con la Guía Metodológica"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto1.jpg"
+              alt="Lii con la Guía Metodológica"
               className="w-full h-auto rounded-lg shadow-md"
             />
           </div>

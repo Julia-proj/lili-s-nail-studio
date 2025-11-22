@@ -34,7 +34,7 @@ const Header = () => {
             onClick={() => scrollToSection("hero")}
             className="text-xl font-serif font-semibold text-foreground hover:opacity-80 transition-smooth"
           >
-            Lili.lab
+            Lii.lab
           </button>
 
           {/* Desktop Menu */}
