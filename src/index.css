@@ -20,28 +20,28 @@ All colors MUST be HSL.
     --primary: 0 0% 15%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96%;
+    --secondary: 0 0% 98%;
     --secondary-foreground: 0 0% 15%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 0 0% 92%;
+    --accent: 0 0% 96%;
     --accent-foreground: 0 0% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
     --ring: 0 0% 15%;
 
     --radius: 0.5rem;
     
     /* Custom design tokens */
-    --neutral-50: 0 0% 98%;
-    --neutral-100: 0 0% 95%;
-    --neutral-200: 0 0% 90%;
+    --neutral-50: 0 0% 99%;
+    --neutral-100: 0 0% 97%;
+    --neutral-200: 0 0% 94%;
     --neutral-800: 0 0% 20%;
     --neutral-900: 0 0% 10%;
     
