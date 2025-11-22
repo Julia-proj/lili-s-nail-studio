@@ -38,10 +38,10 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
     
-    /* Custom design tokens */
+    /* Custom design tokens - очень светлые оттенки для блоков */
     --neutral-50: 0 0% 99%;
-    --neutral-100: 0 0% 97%;
-    --neutral-200: 0 0% 94%;
+    --neutral-100: 0 0% 98%;
+    --neutral-200: 0 0% 96%;
     --neutral-800: 0 0% 20%;
     --neutral-900: 0 0% 10%;
     
