@@ -5,7 +5,7 @@ const Guia = () => {
   return (
     <section id="guia" className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Content Column */}
           <div className="fade-in">
             <div className="flex items-center gap-3 mb-4">
@@ -69,7 +69,7 @@ const Guia = () => {
           {/* Image Column */}
           <div className="fade-in order-first md:order-last">
             <img
-              src="images/foto6.jpg"
+              src="https://github.com/[username]/[repo]/raw/main/images/foto7.jpg"
               alt="Guía Metodológica"
               className="w-full h-auto rounded-lg shadow-lg"
             />
