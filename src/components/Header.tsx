@@ -37,60 +37,34 @@ const Header = () => {
             Lii.lab
           </button>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("quien-soy")}
-              className="text-sm text-foreground hover:text-primary transition-smooth"
-            >
+            <button onClick={() => scrollToSection("quien-soy")} className="text-sm text-foreground hover:text-primary transition-smooth">
               Quién soy
             </button>
-            <button
-              onClick={() => scrollToSection("cursos")}
-              className="text-sm text-foreground hover:text-primary transition-smooth"
-            >
-              Cursos
+            <button onClick={() => scrollToSection("formacion")} className="text-sm text-foreground hover:text-primary transition-smooth">
+              Formación
             </button>
-            <button
-              onClick={() => scrollToSection("guia")}
-              className="text-sm text-foreground hover:text-primary transition-smooth"
-            >
-              Guía Metodológica
+            <button onClick={() => scrollToSection("contacto")} className="text-sm text-foreground hover:text-primary transition-smooth">
+              Contacto
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? <X /> : <Menu />}
           </Button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              <button
-                onClick={() => scrollToSection("quien-soy")}
-                className="text-sm text-foreground hover:text-primary transition-smooth text-left"
-              >
+              <button onClick={() => scrollToSection("quien-soy")} className="text-sm text-foreground hover:text-primary transition-smooth text-left">
                 Quién soy
               </button>
-              <button
-                onClick={() => scrollToSection("cursos")}
-                className="text-sm text-foreground hover:text-primary transition-smooth text-left"
-              >
-                Cursos
+              <button onClick={() => scrollToSection("formacion")} className="text-sm text-foreground hover:text-primary transition-smooth text-left">
+                Formación
               </button>
-              <button
-                onClick={() => scrollToSection("guia")}
-                className="text-sm text-foreground hover:text-primary transition-smooth text-left"
-              >
-                Guía Metodológica
+              <button onClick={() => scrollToSection("contacto")} className="text-sm text-foreground hover:text-primary transition-smooth text-left">
+                Contacto
               </button>
             </div>
           </div>

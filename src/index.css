@@ -38,12 +38,20 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
     
-    /* Custom design tokens - очень светлые оттенки для блоков */
+    /* Custom design tokens */
     --neutral-50: 0 0% 99%;
     --neutral-100: 0 0% 98%;
     --neutral-200: 0 0% 96%;
     --neutral-800: 0 0% 20%;
     --neutral-900: 0 0% 10%;
+    
+    /* Warm accent colors */
+    --gold: 43 60% 55%;
+    --gold-light: 43 50% 90%;
+    --plum: 340 35% 30%;
+    --plum-foreground: 0 0% 98%;
+    --rose-accent: 350 40% 70%;
+    --warm-bg: 45 20% 98%;
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
