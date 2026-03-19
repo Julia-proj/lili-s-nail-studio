@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
 
 @layer base {
   :root {
@@ -43,34 +45,38 @@
     --neutral-800: 0 0% 20%;
     --neutral-900: 0 0% 10%;
     
-    /* Brand accent colors */
-    --plum: 273 25% 53%;
-    --plum-hover: 273 27% 47%;
-    --plum-foreground: 0 0% 98%;
-    --lavender: 278 32% 78%;
+    /* Warm accent colors */
     --gold: 43 60% 55%;
     --gold-light: 43 50% 90%;
+    --plum: 340 35% 30%;
+    --plum-foreground: 0 0% 98%;
     --rose-accent: 350 40% 70%;
     --warm-bg: 45 20% 98%;
-    --quiensoy-bg: 0 0% 96%;
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
+
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 273 25% 53%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
     --sidebar-primary-foreground: 0 0% 98%;
+
     --sidebar-accent: 240 4.8% 95.9%;
+
     --sidebar-accent-foreground: 240 5.9% 10%;
+
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 273 25% 53%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 0 0% 10%;
     --foreground: 0 0% 95%;
 
-    --card: 0 0% 12%;
+    --card: 0 0% 10%;
     --card-foreground: 0 0% 95%;
 
     --popover: 0 0% 10%;
@@ -94,30 +100,20 @@
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 0 0% 80%;
-
     --sidebar-background: 0 0% 12%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 273 25% 60%;
+    --sidebar-primary: 0 0% 20%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 0 0% 18%;
     --sidebar-accent-foreground: 0 0% 95%;
     --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 273 25% 60%;
+    --sidebar-ring: 0 0% 70%;
     
     --neutral-50: 0 0% 12%;
     --neutral-100: 0 0% 18%;
     --neutral-200: 0 0% 20%;
     --neutral-800: 0 0% 85%;
     --neutral-900: 0 0% 95%;
-
-    --plum: 273 25% 65%;
-    --plum-hover: 273 27% 58%;
-    --lavender: 278 32% 70%;
-    --gold: 43 60% 60%;
-    --gold-light: 43 30% 20%;
-    --rose-accent: 350 40% 65%;
-    --warm-bg: 45 5% 12%;
-    --quiensoy-bg: 0 0% 14%;
   }
 }
 
@@ -127,7 +123,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
     font-feature-settings: "kern" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
