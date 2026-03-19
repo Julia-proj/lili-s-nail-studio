@@ -1,48 +1,63 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import { Badge } from "@/components/ui/badge";
+import { BookOpen } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const navigate = useNavigate();
+
+  const scrollToFormacion = () => {
+    document.getElementById("formacion")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0.5)), url(${heroBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="relative min-h-screen flex flex-col justify-end overflow-hidden"
     >
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-2xl fade-in">
-          <p className="text-sm tracking-wider text-white/90 mb-4 font-light">
-            Lii · Formación para manicuristas
-          </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover"
+        style={{
+          backgroundImage: "url('/images/Hero.jpg')",
+          backgroundPosition: "center 30%",
+        }}
+      />
+      
+      {/* Gradient overlay — bottom-up on mobile, left-right on desktop */}
+      <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+
+      {/* MANIC 0.0 Badge */}
+      <div className="absolute top-24 left-6 md:left-10 z-10">
+        <Badge className="bg-plum text-plum-foreground border-0 text-xs tracking-[0.15em] px-3 py-1.5">
+          MANIC 0.0
+        </Badge>
+      </div>
+
+      {/* Content pinned to bottom */}
+      <div className="relative z-10 container mx-auto px-4 pb-16 md:pb-20">
+        <div className="max-w-xl fade-in">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4 leading-tight">
             Formación profesional en manicura
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 font-light leading-relaxed">
+          <p className="text-base md:text-lg text-white/85 mb-8 font-light leading-relaxed max-w-md">
             Formación y guía metodológica para manicuristas que quieren trabajar con
             precisión, rapidez y método.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Button
               size="lg"
-              onClick={() => scrollToSection("cursos")}
-              className="bg-white text-primary hover:bg-white/90 transition-smooth"
+              onClick={scrollToFormacion}
+              className="bg-plum text-white hover:bg-plum-hover border-0 gap-2"
             >
+              <BookOpen className="w-4 h-4" />
               Ver cursos
             </Button>
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollToSection("guia")}
-              className="border-white text-white bg-transparent hover:bg-white/10 transition-smooth"
+              onClick={scrollToFormacion}
+              className="border-white/60 text-white bg-transparent hover:bg-white/10 transition-smooth"
             >
               Guía Metodológica
             </Button>

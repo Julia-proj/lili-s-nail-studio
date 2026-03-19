@@ -3,21 +3,25 @@ import { Card } from "@/components/ui/card";
 
 const QuienSoy = () => {
   return (
-    <section id="quien-soy" className="py-20 bg-neutral-50">
+    <section id="quien-soy" className="py-20 bg-quiensoy-bg">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Image Column */}
-          <div className="fade-in">
-            <img
-              src="/images/Foto7.jpg"
-              alt="Lili — manicurista y formadora profesional"
-              className="w-full h-auto rounded-lg shadow-md"
-            />
-            <div className="mt-4 text-center">
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
+          <div className="fade-in relative">
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <img
+                src="/images/Foto7.jpg"
+                alt="Lili — manicurista y formadora profesional"
+                className="w-full object-cover aspect-[3/4] md:aspect-[4/5]"
+                style={{ objectPosition: "center 15%" }}
+              />
+            </div>
+            {/* Overlay on photo */}
+            <div className="absolute bottom-4 left-4 bg-background/90 backdrop-blur-sm rounded-lg px-4 py-3">
+              <h3 className="text-lg font-serif">Soy Lili</h3>
+              <p className="text-xs tracking-[0.15em] uppercase text-muted-foreground">
                 Manicurista & Formadora
               </p>
-              <h3 className="text-xl font-serif mt-1">Soy Lili</h3>
             </div>
           </div>
 
@@ -40,61 +44,40 @@ const QuienSoy = () => {
 
             {/* Key Benefits Cards */}
             <div className="grid gap-4">
-              <Card className="p-5 bg-card border-border hover:shadow-md transition-smooth">
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-lg" style={{ backgroundColor: "hsl(var(--gold-light))" }}>
-                    <BookOpen className="w-5 h-5" style={{ color: "hsl(var(--plum))" }} />
+              {[
+                {
+                  icon: BookOpen,
+                  title: "Formación continua",
+                  text: "Método propio creado después de años de práctica real en cabina.",
+                },
+                {
+                  icon: Target,
+                  title: "Precisión",
+                  text: "Técnica exacta y detallada que evita retrabajos y garantiza resultados limpios.",
+                },
+                {
+                  icon: Clock,
+                  title: "Rapidez",
+                  text: "Optimización de tiempos sin perder calidad.",
+                },
+                {
+                  icon: Ruler,
+                  title: "Metodología",
+                  text: "Sistema claro y estructurado que facilita aprender, replicar y trabajar sin improvisaciones.",
+                },
+              ].map((item) => (
+                <Card key={item.title} className="p-5 bg-card border-border hover:shadow-md transition-smooth">
+                  <div className="flex items-start gap-4">
+                    <div className="p-2.5 rounded-lg bg-gold-light">
+                      <item.icon className="w-5 h-5 text-plum" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-base mb-1 font-sans">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.text}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-base mb-1">Formación continua</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Método propio creado después de años de práctica real en cabina
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-5 bg-card border-border hover:shadow-md transition-smooth">
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-lg" style={{ backgroundColor: "hsl(var(--gold-light))" }}>
-                    <Target className="w-5 h-5" style={{ color: "hsl(var(--plum))" }} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base mb-1">Precisión</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Técnica exacta y detallada que evita retrabajos y garantiza resultados limpios
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-5 bg-card border-border hover:shadow-md transition-smooth">
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-lg" style={{ backgroundColor: "hsl(var(--gold-light))" }}>
-                    <Clock className="w-5 h-5" style={{ color: "hsl(var(--plum))" }} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base mb-1">Rapidez</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Optimización de tiempos sin perder calidad en el servicio
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-5 bg-card border-border hover:shadow-md transition-smooth">
-                <div className="flex items-start gap-4">
-                  <div className="p-2.5 rounded-lg" style={{ backgroundColor: "hsl(var(--gold-light))" }}>
-                    <Ruler className="w-5 h-5" style={{ color: "hsl(var(--plum))" }} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-base mb-1">Metodología</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Sistema claro y estructurado que facilita aprender, replicar y trabajar sin improvisaciones
-                    </p>
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              ))}
             </div>
 
             <p className="text-base text-muted-foreground leading-relaxed">
